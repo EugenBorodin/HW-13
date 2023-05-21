@@ -3,7 +3,7 @@
 // Раскройте promise при помощи then, выведите имя студента.
 
 
-function gerStudent() {
+function getStudent() {
     return new Promise((res, rej) => {
         setTimeout(() => {
             const student = {
@@ -14,3 +14,11 @@ function gerStudent() {
         }, 4000);
     });
 }
+
+const studentPromise = getStudent();
+
+studentPromise.then(student => {
+    console.log(student.name);
+}).catch(error => {
+    console.error(error);
+})
