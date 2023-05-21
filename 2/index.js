@@ -15,3 +15,14 @@ function getDriverLicence(success, failure) {
         failure("упс неудача :(");
     }
 }
+
+
+function success(result) {
+    console.log("Успешно завершено с результатом: " + result);
+}
+
+function failure(error) {
+    console.log("Завершено с ошибкой : " + error);
+}
+
+getDriverLicence(success, failure);
